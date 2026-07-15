@@ -22,6 +22,18 @@ import json
 import streamlit as st
 import pandas as pd
 
+try:
+    # Streamlit Community Cloud only exposes secrets via st.secrets, not
+    # os.environ — but every other module in this project (including ones
+    # reused here, like settings.py) reads config through os.environ so it
+    # works the same locally (.env) and in GitHub Actions (real env vars).
+    # Bridge the two here, before settings.py is imported, so nothing else
+    # needs to know it's running on Community Cloud.
+    for _key, _value in st.secrets.items():
+        os.environ.setdefault(_key, str(_value))
+except Exception:
+    pass  # no secrets.toml locally — settings.py falls back to .env via dotenv
+
 from settings import settings
 from db import get_session
 from models import Job, Company, JobMatch, Application, ApplicationStatus, Contact, FollowUp, GeneratedDocument, Insight
