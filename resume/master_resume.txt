@@ -1,0 +1,48 @@
+Tanya
++91-7048906318 | tanya.ug24@gmail.com | LinkedIn | GitHub
+
+EDUCATION
+B.Tech (Information Technology & Network Security), Netaji Subhas University of Technology, 2028 (in progress)
+CBSE Class XII, St. Joseph's Academy, 2023
+CBSE Class X, St. Joseph's Academy, 2021
+
+INTERNSHIP AND EXPERIENCE
+AI Web Development Intern | InAmigos Foundation | Remote | May 2026 - June 2026
+- Designed NGO website proposal covering 6 key sections and 15+ UI components including donation portal, volunteer onboarding and campaign management features
+
+Freelance Web Developer | Self Employed | Delhi | 2026 - Present
+- Designed, developed and deployed two production healthcare websites (sanjeevanihospitaldelhi.in, amayrahealth.in), both live and actively serving patients
+
+PROJECTS
+AlgoTrack - AI-Powered DSA Learning Platform
+- Tech: React, TypeScript, Vite, Tailwind CSS, Supabase, PostgreSQL, OpenAI API
+- Built scalable full-stack SaaS platform with Supabase Auth, PostgreSQL database and REST APIs for secure user authentication and cloud data management
+- Integrated OpenAI API to generate AI-powered summaries and revision notes using backend API workflows
+
+PixelPop - PhotoBooth Web App
+- Tech: JavaScript, HTML5, CSS3, Canvas API, MediaDevices API, Interact.js
+- Built browser-based photobooth using MediaDevices API for webcam capture and Canvas API to composite photos into downloadable strips with draggable stickers and image filters
+
+FloatChat AI - Marine Data Management System
+- Tech: React, TypeScript, Vite, Tailwind CSS, Python, Flask, PostgreSQL, Supabase, Recharts
+- Built full-stack marine analytics platform with Flask REST API backend, React TypeScript frontend, and PostgreSQL schema with 6 normalized tables monitoring 4,000+ active ocean floats globally
+- Rendered interactive Recharts dashboards for temperature, salinity and pressure trends with complex SQL JOINs and aggregations for multi-parameter environmental data analysis
+
+ACADEMIC ACHIEVEMENTS
+- Solved 200+ DSA problems across arrays, trees, graphs and dynamic programming in Java
+- ET AI Hackathon 2.0 by Economic Times - Shortlisted for Phase 2: Build Sprint from 60,000+ participants (June 2026)
+- Smart India Hackathon 2025 - Selected in NSUT Internal Round for FloatChat AI
+
+TECHNICAL SKILLS
+Languages: Java, Python, JavaScript, TypeScript, C++
+Frameworks & Libraries: React, Flask, Tailwind CSS, HTML5, CSS3, Vite, REST APIs, Recharts, Node.js
+Databases & Backend: Supabase, PostgreSQL, MySQL
+AI & Tools: OpenAI API, Git, GitHub, Figma, Netlify, Vercel, Docker
+Coursework: DSA, OOP, Operating Systems, DBMS, Computer Networks, Distributed Systems
+
+POSITIONS OF RESPONSIBILITY
+Team Member | Enactus NSUT | 2024-2025
+- Contributed to sustainability-focused social impact initiatives using tech-driven solutions
+
+TARGET ROLES: SDE Intern, Software Engineering Intern, Tech Intern, Product Intern, Product Analyst Intern
+TARGET: Summer internships, Remote or Onsite

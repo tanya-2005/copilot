@@ -1,0 +1,29 @@
+# ============================================================
+# matching.yaml — role filters and scoring thresholds
+# ============================================================
+
+roles:
+  title_keywords:
+    - "sde intern"
+    - "software engineer intern"
+    - "software engineering intern"
+    - "swe intern"
+    - "tech intern"
+    - "technical intern"
+    - "product intern"
+    - "product analyst intern"
+    - "product management intern"
+    - "engineering intern"
+    - "developer intern"
+
+  exclude_keywords:
+    - "senior"
+    - "staff"
+    - "principal"
+    - "lead "
+    - "manager"
+    - "phd"
+
+matching:
+  strong_match_threshold: 70   # generates tailored resume/cover letter/email + notifies you
+  min_log_threshold: 40        # below this, not even stored — pure noise

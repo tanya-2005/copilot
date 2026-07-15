@@ -1,0 +1,28 @@
+name: Apply to Approved Applications
+
+# Deliberately manual-only trigger (not scheduled or on-push) — this workflow
+# can submit real applications, so it only runs when you explicitly click
+# "Run workflow" after reviewing what's marked 'ready_to_apply' in the dashboard.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Process ready_to_apply applications
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          CANDIDATE_NAME: ${{ secrets.CANDIDATE_NAME }}
+          CANDIDATE_EMAIL: ${{ secrets.CANDIDATE_EMAIL }}
+          CANDIDATE_PHONE: ${{ secrets.CANDIDATE_PHONE }}
+        run: python src/scheduler/apply_approved.py

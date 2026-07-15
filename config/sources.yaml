@@ -1,0 +1,71 @@
+# ============================================================
+# sources.yaml — what to search and how
+# ============================================================
+
+companies:
+  - name: "Stripe"
+    ats: greenhouse
+    board_token: "stripe"
+  - name: "Notion"
+    ats: ashby                       # migrated from Greenhouse, verified 2026-07-16
+    board_token: "notion"
+  - name: "Ramp"
+    ats: ashby                       # migrated from Greenhouse, verified 2026-07-16
+    board_token: "ramp"
+  - name: "Airtable"
+    ats: greenhouse
+    board_token: "airtable"
+  # - name: "Retool"
+  #   No working public ATS list endpoint found as of 2026-07-16 (Greenhouse
+  #   token "retool" 404s, Ashby token guesses 404 too — their jobs.ashbyhq.com
+  #   page is client-rendered so the real token isn't visible in static HTML).
+  #   Re-enable once you confirm the current board_token from their careers page.
+  - name: "Scale AI"
+    ats: greenhouse
+    board_token: "scaleai"
+  # - name: "Rippling"
+  #   Same issue as Retool above — no working public ATS list endpoint found
+  #   as of 2026-07-16. Re-enable once confirmed.
+  - name: "Brex"
+    ats: greenhouse
+    board_token: "brex"
+  - name: "Figma"
+    ats: greenhouse
+    board_token: "figma"
+  - name: "Plaid"
+    ats: lever
+    board_token: "plaid"
+  - name: "Netlify"
+    ats: greenhouse                  # was misconfigured as lever, verified 2026-07-16
+    board_token: "netlify"
+  - name: "Linear"
+    ats: ashby
+    board_token: "linear"
+  - name: "Vercel"
+    ats: ashby
+    board_token: "vercel"
+  - name: "Perplexity"
+    ats: ashby
+    board_token: "perplexity"
+  # Add more companies here — check their careers page URL to find the
+  # board_token (see README "Adding companies" section).
+  #
+  # Workday example:
+  #   - name: "Some Big Co"
+  #     ats: workday
+  #     board_token: "somebigco/wd5/External"   # tenant/host/site — see README
+  # SmartRecruiters example:
+  #   - name: "Some Startup"
+  #     ats: smartrecruiters
+  #     board_token: "SomeStartup"               # from jobs.smartrecruiters.com/<token>
+
+web_discovery:
+  enabled: true
+  queries:
+    - "SDE intern summer internship 2027 remote"
+    - "software engineering intern summer 2027 site:wellfound.com"
+    - "product analyst intern summer 2027"
+    - "product intern summer 2027 remote"
+    - "tech intern summer internship 2027 India remote"
+    - "Y Combinator startup jobs software engineering intern"
+  max_results_per_query: 8
