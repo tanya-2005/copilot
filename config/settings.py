@@ -9,16 +9,24 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-class Settings:
-    DATABASE_URL: str = os.environ.get("DATABASE_URL", "")
-    OPENROUTER_API_KEY: str = os.environ.get("OPENROUTER_API_KEY", "")
-    TAVILY_API_KEY: str = os.environ.get("TAVILY_API_KEY", "")
+_ENV_VARS = [
+    "DATABASE_URL", "OPENROUTER_API_KEY", "TAVILY_API_KEY",
+    "SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "DIGEST_TO",
+]
 
-    SMTP_HOST: str = os.environ.get("SMTP_HOST", "")
-    SMTP_PORT: str = os.environ.get("SMTP_PORT", "")
-    SMTP_USER: str = os.environ.get("SMTP_USER", "")
-    SMTP_PASS: str = os.environ.get("SMTP_PASS", "")
-    DIGEST_TO: str = os.environ.get("DIGEST_TO", "")
+
+class Settings:
+    """Reads os.environ fresh on every attribute access (via __getattr__)
+    rather than caching values at import time. Needed for platforms like
+    Streamlit Community Cloud, which keep one Python process alive across
+    script re-runs — if a value were baked in as a class attribute at
+    import time, adding/editing a secret later in the same process would
+    silently keep using the old (often empty) value."""
+
+    def __getattr__(self, name: str):
+        if name in _ENV_VARS:
+            return os.environ.get(name, "")
+        raise AttributeError(name)
 
     def validate_for(self, required: list[str]):
         """Call this at the top of each entry-point script with the vars it
